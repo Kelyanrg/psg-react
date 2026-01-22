@@ -1,16 +1,66 @@
-# React + Vite
+# 🔴🔵 PSG Fan App - React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur l'application non-officielle dédiée aux supporters du Paris Saint-Germain. Ce projet est une Single Page Application (SPA) développée avec **React.js**, permettant de consulter l'effectif actuel, le calendrier des matchs et l'histoire du club.
 
-Currently, two official plugins are available:
+## 🌟 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🏠 Accueil Immersif :** Présentation du club, palmarès et informations clés (Stade, Président).
+- **⚽ Effectif 2025 :**
+  - Liste complète des joueurs récupérée dynamiquement via API.
+  - **Recherche en temps réel** (filtrage par nom).
+  - **Pagination** (6 joueurs par page pour une navigation fluide).
+  - Cartes joueurs interactives avec effets de survol.
+- **👤 Détails Joueur :** Vue détaillée pour chaque joueur (Bio, Nationalité, Âge, Poste) sans rechargement de page.
+- **📅 Matchs & Résultats :**
+  - Affichage des 5 derniers résultats (scores, adversaires).
+  - Affichage des 5 prochains matchs à venir (dates, heures).
+- **📱 Responsive Design :** Interface adaptée aux mobiles, tablettes et ordinateurs.
 
-## React Compiler
+## 🛠️ Stack Technique
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend :** React.js (Hooks: `useState`, `useEffect`)
+- **Styles :** CSS3 Moderne (Flexbox, Grid, Variables CSS) avec respect de la charte graphique du PSG.
+- **Données :** [TheSportsDB API](https://www.thesportsdb.com/) (Team ID: 133714).
 
-## Expanding the ESLint configuration
+## 🚀 Installation et Lancement
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Pour tester le projet localement sur votre machine :
+
+1.  **Cloner le projet :**
+
+    ```bash
+    git clone [https://github.com/ton-pseudo/nom-du-repo.git](https://github.com/ton-pseudo/nom-du-repo.git)
+    cd nom-du-repo
+    ```
+
+2.  **Installer les dépendances :**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement :**
+
+    ```bash
+    npm run dev
+    # ou
+    npm start
+    ```
+
+4.  Ouvrez votre navigateur sur `http://localhost:5173` (ou le port indiqué).
+
+## 📂 Structure du Projet
+
+```text
+src/
+├── assets/          # Images (Logo, etc.)
+├── components/      # Composants réutilisables
+│   ├── footer.jsx   # Pied de page
+│   └── getplayer.jsx # Vue détail d'un joueur
+├── pages/           # Pages principales
+│   ├── home.jsx     # Page d'accueil
+│   ├── maliste.jsx  # Liste des joueurs (avec recherche/pagination)
+│   └── matches.jsx  # Calendrier des matchs
+├── App.jsx          # Composant racine & Navigation
+└── main.jsx         # Point d'entrée React
+```
