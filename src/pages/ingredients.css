@@ -1,0 +1,153 @@
+/* --- VARIABLES --- */
+:root {
+  --psg-blue: #004170;
+  --psg-red: #da291c;
+  --bg-gray: #f0f2f5;
+}
+
+.matches-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--psg-blue);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: var(--psg-red);
+  margin: 10px auto;
+}
+
+/* --- GRILLE PRINCIPALE --- */
+.matches-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile d'abord */
+  gap: 50px;
+}
+
+@media (min-width: 900px) {
+  .matches-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colonnes sur PC */
+  }
+}
+
+.section-title {
+  background-color: var(--psg-blue);
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.match-list {
+  background: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* --- CARTE DE MATCH (COMMUN) --- */
+.match-card {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.match-card:last-child {
+  border-bottom: none;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.league-name {
+  color: var(--psg-red);
+}
+
+/* --- STYLES SPÉCIFIQUES RÉSULTATS --- */
+.score-board {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team {
+  width: 40%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.score-badge {
+  background-color: var(--bg-gray);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--psg-blue);
+  min-width: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.separator {
+  color: #bbb;
+}
+
+/* --- STYLES SPÉCIFIQUES À VENIR --- */
+.fixture-board {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.vs-badge {
+  background-color: var(--psg-red);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.match-time {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  background: #f9f9f9;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.no-match {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-style: italic;
+}
